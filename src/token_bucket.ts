@@ -30,7 +30,7 @@ class TokenBucket {
   }
 }
 
-class RateLimiter {
+class TokenBucketRateLimiter {
   private buckets: Map<string, TokenBucket>;
 
   constructor() {
@@ -56,4 +56,4 @@ class RateLimiter {
   }
 }
 
-export const rateLimiter = new RateLimiter();
+export const tokenBucketRateLimiter = new TokenBucketRateLimiter();
