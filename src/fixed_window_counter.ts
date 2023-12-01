@@ -54,7 +54,7 @@ class FixedWindowCounterRateLimiter {
 
     if (!counter) {
       // Create a new counter for the IP of it doesn't exist
-      counter = new FixedWindowCounter(60, 5); // Window size: 60 seconds, Threshold: 5 requests
+      counter = new FixedWindowCounter(60, 10); // Window size: 60 seconds, Threshold: 10 requests
       this.counters.set(ip, counter);
     }
     return counter.request();
